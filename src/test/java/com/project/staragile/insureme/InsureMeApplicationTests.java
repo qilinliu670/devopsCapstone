@@ -3,7 +3,12 @@ package com.project.staragile.insureme;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
+
 
 @SpringBootTest
 class InsureMeApplicationTests {
@@ -27,5 +32,16 @@ class InsureMeApplicationTests {
 		assertEquals(null,pService.searchPolicy());
 	}
 
-	
+	@Test
+	void seleniumTest() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jason\\Documents\\eclipse\\workspace\\devopsCapstone\\chromedriver.exe");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--remote-allow-origins=*");
+        WebDriver driver = new ChromeDriver(chromeOptions);
+        driver.get("http://facebook.com");
+        driver.findElement(By.id("email")).sendKeys("myEmail");
+        driver.findElement(By.id("pass")).sendKeys("myPassword");
+        assertEquals(1, 1);
+        driver.close();
+	}
 }
