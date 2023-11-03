@@ -15,12 +15,10 @@ class InsureMeApplicationTests {
 
 	@Test
 	void contextLoads() {
-		System.out.println("1");
 	}
 	
 	@Test
 	void testCreatePolicy() {
-		System.out.println("2");
 		Policy policy = new Policy(1, "Shubham", "Individual" , 10000, "10-Sep-2021", "10-Sep-2022");
 		PolicyService pService = new PolicyService();
 		//Policy outputPolicy = pService.CreatePolicy();
@@ -30,14 +28,12 @@ class InsureMeApplicationTests {
 	
 	@Test
 	void testSearchPolicy() {
-		System.out.println("3");
 		PolicyService pService = new PolicyService();
 		assertEquals(null,pService.searchPolicy());
 	}
 
 	@Test
 	void seleniumTest() {
-		System.out.println("4");
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jason\\Documents\\eclipse\\workspace\\devopsCapstone\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--remote-allow-origins=*");
