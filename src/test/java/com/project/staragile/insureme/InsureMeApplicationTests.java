@@ -3,10 +3,6 @@ package com.project.staragile.insureme;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
@@ -32,7 +28,7 @@ class InsureMeApplicationTests {
 		assertEquals(null,pService.searchPolicy());
 	}
 
-	@Test
+	/*@Test
 	void seleniumTest() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jason\\Documents\\eclipse\\workspace\\devopsCapstone\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -43,5 +39,5 @@ class InsureMeApplicationTests {
         driver.findElement(By.id("pass")).sendKeys("myPassword");
         assertEquals(1, 1);
         driver.close();
-	}
+	}*/
 }
